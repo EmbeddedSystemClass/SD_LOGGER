@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="4.5.1 -O0 -nostartfiles -Map=freertos_test.map -mcpu=cortex-m3 -mthumb -LD:\PROJECTS\STM32\workspace\uso_4.10.2012\freertos_test --gc-sections -TD:\PROJECTS\STM32\workspace\uso_4.10.2012\freertos_test\link.ld -lgcc -lc -lm -g">
+      <target file="freertos_test.elf" lastModified="13a4ee9f7e4">
+         <source file="..\obj\stm32f10x_tim.o" lastModified="13a4ee8e8b6"/>
+         <source file="..\obj\startup_stm32f10x_md_vl.o" lastModified="13a4ee8e972"/>
+         <source file="..\obj\core_cm3.o" lastModified="13a4ee8ea3d"/>
+         <source file="..\obj\proto.o" lastModified="13a4ee8ede6"/>
+         <source file="..\obj\system_stm32f10x.o" lastModified="13a4ee8eed1"/>
+         <source file="..\obj\stm32f10x_gpio.o" lastModified="13a4ee8effa"/>
+         <source file="..\obj\main.o" lastModified="13a4ee8f103"/>
+         <source file="..\obj\timers.o" lastModified="13a4ee8f171"/>
+         <source file="..\obj\printf.o" lastModified="13a4ee8f23c"/>
+         <source file="..\obj\stm32f10x_rcc.o" lastModified="13a4ee8f365"/>
+         <source file="..\obj\tasks.o" lastModified="13a4ee8f4fb"/>
+         <source file="..\obj\stm32f10x_usart.o" lastModified="13a4ee8f672"/>
+         <source file="..\obj\menu.o" lastModified="13a4ee8fb83"/>
+         <source file="..\obj\list.o" lastModified="13a4ee8fc9c"/>
+         <source file="..\obj\syscalls.o" lastModified="13a4ee8fd86"/>
+         <source file="..\obj\stm32f10x_flash.o" lastModified="13a4ee8feaf"/>
+         <source file="..\obj\queue.o" lastModified="13a4ee8ffe8"/>
+         <source file="..\obj\port.o" lastModified="13a4ee900e2"/>
+         <source file="..\obj\croutine.o" lastModified="13a4ee901dc"/>
+         <source file="..\obj\dol.o" lastModified="13a4ee902d6"/>
+         <source file="..\obj\frequency.o" lastModified="13a4ee903df"/>
+         <source file="..\obj\channels.o" lastModified="13a4ee904e9"/>
+         <source file="..\obj\misc.o" lastModified="13a4ee905d3"/>
+         <source file="..\obj\hd44780_emcu.o" lastModified="13a4ee906cd"/>
+         <source file="..\obj\heap_2.o" lastModified="13a4ee907d7"/>
+      </target>
+   </processor>
+</history>
