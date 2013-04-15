@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F100RB -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\emcu_driver -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\stm_lib\inc -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source\portable\ARM_CM3 -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\uso -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\cmsis -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source\include -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\cmsis_boot -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source\portable -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\stm_lib -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0 -ID:\PROJECTS\GIT_REPOSITORY\STM32 -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER">
+      <target file="flash.o" lastModified="13e0cec5016">
+         <source file="..\..\..\uso\flash.c" lastModified="136bae15723"/>
+      </target>
+      <target file="startup_coide.o" lastModified="13e0cec4cbb">
+         <source file="..\..\..\startup_coide.c" lastModified="13a4ecbe558"/>
+      </target>
+   </processor>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F100RB -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\emcu_driver -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\stm_lib\inc -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source\portable\ARM_CM3 -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\uso -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\fatfs\rtc -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\cmsis -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source\include -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\cmsis_boot -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source\portable -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\stm_lib -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\fatfs\fat_sd -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0 -ID:\PROJECTS\GIT_REPOSITORY\STM32 -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\fatfs -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER">
+      <target file="syscalls.o" lastModified="13e0d59036b">
+         <source file="..\..\..\syscalls\syscalls.c" lastModified="1369bbf146b"/>
+      </target>
+      <target file="stm32f10x_gpio.o" lastModified="13e0d58fddd">
+         <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="13e0cf8af72"/>
+      </target>
+      <target file="misc.o" lastModified="13e0d590c83">
+         <source file="..\..\..\stm_lib\src\misc.c" lastModified="136813eceec"/>
+      </target>
+      <target file="sd_spi_stm32.o" lastModified="13e0d5cf2be">
+         <source file="..\..\..\fatfs\fat_sd\sd_spi_stm32.c" lastModified="13e0d5ce783"/>
+      </target>
+      <target file="hd44780_emcu.o" lastModified="13e0d590e48">
+         <source file="..\..\..\emcu_driver\hd44780_emcu.c" lastModified="1369b5a38f6"/>
+      </target>
+      <target file="system_stm32f10x.o" lastModified="13e0d58fd22">
+         <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="13e0cf8ccbe"/>
+      </target>
+      <target file="queue.o" lastModified="13e0d5905ec">
+         <source file="..\..\..\FreeRTOSV7.1.0\Source\queue.c" lastModified="13438131dae"/>
+      </target>
+      <target file="stm32f10x_usart.o" lastModified="13e0d590233">
+         <source file="..\..\..\stm_lib\src\stm32f10x_usart.c" lastModified="136a0ecda01"/>
+      </target>
+      <target file="timers.o" lastModified="13e0d58ff45">
+         <source file="..\..\..\FreeRTOSV7.1.0\Source\timers.c" lastModified="13438131dce"/>
+      </target>
+      <target file="proto.o" lastModified="13e0d58fc86">
+         <source file="..\..\..\uso\proto.c" lastModified="138e1b92855"/>
+      </target>
+      <target file="tasks.o" lastModified="13e0d590158">
+         <source file="..\..\..\FreeRTOSV7.1.0\Source\tasks.c" lastModified="13438131dbe"/>
+      </target>
+      <target file="startup_stm32f10x_md_vl.o" lastModified="13e0d58f504">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md_vl.c" lastModified="13e0cf8cba5"/>
+      </target>
+      <target file="fattime.o" lastModified="13e0d590fbf">
+         <source file="..\..\..\fatfs\fat_sd\fattime.c" lastModified="120be0aebc0"/>
+      </target>
+      <target file="stm32f10x_flash.o" lastModified="13e0d590456">
+         <source file="..\..\..\stm_lib\src\stm32f10x_flash.c" lastModified="136b9d67c61"/>
+      </target>
+      <target file="stm32f10x_tim.o" lastModified="13e0d58f467">
+         <source file="..\..\..\stm_lib\src\stm32f10x_tim.c" lastModified="136813eb8a5"/>
+      </target>
+      <target file="dol.o" lastModified="13e0d590a70">
+         <source file="..\..\..\uso\dol.c" lastModified="138e1deca8c"/>
+      </target>
+      <target file="croutine.o" lastModified="13e0d5909b5">
+         <source file="..\..\..\FreeRTOSV7.1.0\Source\croutine.c" lastModified="13438131cf3"/>
+      </target>
+      <target file="stm32f10x_rtc.o" lastModified="13e0d5fa367">
+         <source file="..\..\..\stm_lib\src\stm32f10x_rtc.c" lastModified="13e0d5f85fc"/>
+      </target>
+      <target file="list.o" lastModified="13e0d5902df">
+         <source file="..\..\..\FreeRTOSV7.1.0\Source\list.c" lastModified="13438131cf3"/>
+      </target>
+      <target file="port.o" lastModified="13e0d5904f2">
+         <source file="..\..\..\FreeRTOSV7.1.0\Source\portable\ARM_CM3\port.c" lastModified="13438131d12"/>
+      </target>
+      <target file="stm32f10x_rcc.o" lastModified="13e0d59001f">
+         <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="13e0cf8d903"/>
+      </target>
+      <target file="core_cm3.o" lastModified="13e0d58f5cf">
+         <source file="..\..\..\cmsis\core_cm3.c" lastModified="13e0cf8c433"/>
+      </target>
+      <target file="stm32f10x_pwr.o" lastModified="13e0d5fa58a">
+         <source file="..\..\..\stm_lib\src\stm32f10x_pwr.c" lastModified="13e0d5f862b"/>
+      </target>
+      <target file="channels.o" lastModified="13e0d590be7">
+         <source file="..\..\..\uso\channels.c" lastModified="138e1b84364"/>
+      </target>
+      <target file="rtc.o" lastModified="13e0d6052e1">
+         <source file="..\..\..\fatfs\rtc\rtc.c" lastModified="13e0d6048de"/>
+      </target>
+      <target file="stm32f10x_bkp.o" lastModified="13e0d5ff08d">
+         <source file="..\..\..\stm_lib\src\stm32f10x_bkp.c" lastModified="13e0d5fe34e"/>
+      </target>
+      <target file="frequency.o" lastModified="13e0d590b2c">
+         <source file="..\..\..\uso\frequency.c" lastModified="13a4a4968b3"/>
+      </target>
+      <target file="ff.o" lastModified="13e0d5908da">
+         <source file="..\..\..\fatfs\fat_sd\ff.c" lastModified="1277835e3f0"/>
+      </target>
+      <target file="main.o" lastModified="13e0d67c38b">
+         <source file="..\..\..\main.c" lastModified="13e0d67b8bd"/>
+      </target>
+      <target file="heap_1.o" lastModified="13e0d590f14">
+         <source file="..\..\..\FreeRTOSV7.1.0\Source\portable\MemMang\heap_1.c" lastModified="13438131d70"/>
+      </target>
+      <target file="stm32f10x_spi.o" lastModified="13e0d590d4e">
+         <source file="..\..\..\stm_lib\src\stm32f10x_spi.c" lastModified="13e0cf8386d"/>
+      </target>
+   </processor>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F100RB -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\stm_lib\inc -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\emcu_driver -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source\portable\ARM_CM3 -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\uso -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\cmsis -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source\include -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\cmsis_boot -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source\portable -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\stm_lib -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\lcd_menu -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0 -ID:\PROJECTS\GIT_REPOSITORY\STM32 -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER">
+      <target file="menu.o" lastModified="13e0ce940a4">
+         <source file="..\..\..\lcd_menu\menu.c" lastModified="136ab3232fa"/>
+      </target>
+      <target file="heap_3.o" lastModified="13e0ce94b04">
+         <source file="..\..\..\FreeRTOSV7.1.0\Source\portable\MemMang\heap_3.c" lastModified="13438131d70"/>
+      </target>
+      <target file="printf.o" lastModified="13e0ce9378c">
+         <source file="..\..\..\stdio\printf.c" lastModified="1369bbf13ee"/>
+      </target>
+      <target file="heap_2.o" lastModified="13e0ce94a58">
+         <source file="..\..\..\FreeRTOSV7.1.0\Source\portable\MemMang\heap_2.c" lastModified="13438131d70"/>
+      </target>
+   </processor>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F100RB -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\stm_lib\inc -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\emcu_driver -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source\portable\ARM_CM3 -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\uso -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\fatfs\rtc -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\cmsis -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source\include -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\cmsis_boot -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0\Source\portable -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\stm_lib -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\fatfs\fat_sd -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\FreeRTOSV7.1.0 -ID:\PROJECTS\GIT_REPOSITORY\STM32 -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER\freertos_test\fatfs -ID:\PROJECTS\GIT_REPOSITORY\STM32\SD_LOGGER">
+      <target file="ccsbcs.o" lastModified="13e0d588988">
+         <source file="..\..\..\fatfs\fat_sd\option\ccsbcs.c" lastModified="121daf0aad0"/>
+      </target>
+   </processor>
+</history>
