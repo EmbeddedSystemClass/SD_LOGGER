@@ -20,6 +20,9 @@
 
 #include "rtc.h"
 #include "diskio.h"
+#include "ff.h"
+
+
 
 static void prvSetupHardware( void );
 void ReadRtc( void *pvParameters );
@@ -28,6 +31,12 @@ void ReadSD( void *pvParameters );
 RTC_t rtc;
 BYTE buf[512];
 extern DWORD Timer1, Timer2;	/* 100Hz decrement timers */
+FATFS fs;         /* Work area (file system object) for logical drive */
+FIL fsrc;         /* file objects */
+FRESULT res;
+UINT br;
+
+uint8_t textFileBuffer[]={"First document FAT FILE SYSTEM"};
 
 void prvSetupHardware()
 {
@@ -71,14 +80,30 @@ void ReadRtc( void *pvParameters )
 //-------------------------------------------------------------
 void ReadSD( void *pvParameters )
 {
-	static uint8_t disk_stat=0, read_stat=0;
+	static uint8_t disk_stat=0, read_stat=0,mount_stat=0;
 
 	disk_stat=disk_initialize (0);
+	vTaskDelay(100);
+	//read_stat=disk_read(0,&buf,0,1);
+	//vTaskDelay(100);
+	mount_stat=f_mount(0,&fs);
+
 	while(1)
 	{
-		vTaskDelay(100);
-		read_stat=disk_read(0,&buf,0,1);
-		vTaskDelay(100);
+		res = f_open( &fsrc , "0:/text.txt" ,  FA_OPEN_EXISTING/*|FA_WRITE*/|FA_READ);
+
+	    if ( res == FR_OK )
+	    {
+	      /* Write buffer to file */
+	     // res = f_write(&fsrc, textFileBuffer, sizeof(textFileBuffer), &br);
+	      //vTaskDelay(100);
+	      res=f_read(&fsrc, &buf[0], sizeof(buf), &br);
+	      vTaskDelay(100);
+	      /*close file */
+	      f_close(&fsrc);
+	    }
+
+	    vTaskDelay(1000);
 	}
 }
 //-------------------------------------------------------------
@@ -88,7 +113,7 @@ void vApplicationTickHook( void )//отбиваем тики
 	portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
 	count++;
 
-	if(count==10)
+	if(count>=10)
 	{
 		count=0;
 
@@ -112,17 +137,17 @@ int main(void)
 
 	prvSetupHardware();
 
-	rtc_init();
+//	rtc_init();
 
 
 
-    DOL_Init();
-    Frequency_Init();
-    Proto_Init();
-	 xTaskCreate(ReadRtc,(signed char*)"READ RTC",64,
-	            NULL, tskIDLE_PRIORITY + 1, NULL);
+ //   DOL_Init();
+//    Frequency_Init();
+//    Proto_Init();
+//	 xTaskCreate(ReadRtc,(signed char*)"READ RTC",64,
+//	            NULL, tskIDLE_PRIORITY + 1, NULL);
 
-	 xTaskCreate(ReadSD,(signed char*)"READ SD",64,
+	 xTaskCreate(ReadSD,(signed char*)"READ SD",256,
 	            NULL, tskIDLE_PRIORITY + 1, NULL);
 	 /* Start the scheduler. */
     vTaskStartScheduler();

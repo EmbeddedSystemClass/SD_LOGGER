@@ -16,7 +16,7 @@
       </source>
       <source file="..\..\..\cmsis\core_cm3.c" lastModified="13e0dbb9790">
       </source>
-      <source file="..\..\..\fatfs\fat_sd\ff.c" lastModified="1277835e7d8">
+      <source file="..\..\..\fatfs\fat_sd\ff.c" lastModified="13e127e4cb3">
          <include file="..\..\..\fatfs\fat_sd\ff.h"/>
          <include file="..\..\..\fatfs\fat_sd\diskio.h"/>
       </source>
@@ -133,6 +133,9 @@
       <source file="..\..\..\fatfs\fat_sd\integer.h" lastModified="122a3ea5fd0">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
+      <source file="..\..\..\fatfs\fat_sd\option\ccsbcs.c" lastModified="121daf0aad0">
+         <include file="..\..\..\fatfs\fat_sd\ff.h"/>
+      </source>
       <source file="..\..\..\FreeRTOSV7.1.0\Source\include\queue.h" lastModified="13438132a8f">
          <include file="..\..\..\FreeRTOSV7.1.0\Source\include\mpu_wrappers.h"/>
       </source>
@@ -178,7 +181,7 @@
          <include file="..\..\..\FreeRTOSV7.1.0\Source\include\portable.h"/>
          <include file="..\..\..\FreeRTOSV7.1.0\Source\include\list.h"/>
       </source>
-      <source file="..\..\..\main.c" lastModified="13e11bcd23e">
+      <source file="..\..\..\main.c" lastModified="13e12dc5c4a">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
@@ -193,6 +196,7 @@
          <include file="..\..\..\uso\frequency.h"/>
          <include file="..\..\..\fatfs\rtc\rtc.h"/>
          <include file="..\..\..\fatfs\fat_sd\diskio.h"/>
+         <include file="..\..\..\fatfs\fat_sd\ff.h"/>
       </source>
       <source file="..\..\..\fatfs\fat_sd\sd_spi_stm32.c" lastModified="13e11986d69">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
@@ -221,10 +225,6 @@
       </source>
       <source file="..\..\..\FreeRTOSV7.1.0\Source\portable\ARM_CM3\portmacro.h" lastModified="13438132abe">
       </source>
-      <source file="..\..\..\stm_lib\src\stm32f10x_pwr.c" lastModified="13e0dbbd5c2">
-         <include file="..\..\..\stm_lib\inc\stm32f10x_pwr.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
       <source file="..\..\..\uso\proto.h" lastModified="138e1de11fa">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
@@ -238,13 +238,17 @@
          <include file="..\..\..\FreeRTOSV7.1.0\Source\include\queue.h"/>
          <include file="..\..\..\FreeRTOSV7.1.0\Source\include\semphr.h"/>
       </source>
-      <source file="..\..\..\FreeRTOSV7.1.0\Source\include\StackMacros.h" lastModified="13438132a8f">
+      <source file="..\..\..\stm_lib\src\stm32f10x_pwr.c" lastModified="13e0dbbd5c2">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_pwr.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
       </source>
-      <source file="..\..\..\FreeRTOSV7.1.0\Source\include\projdefs.h" lastModified="13438132a8f">
+      <source file="..\..\..\FreeRTOSV7.1.0\Source\include\StackMacros.h" lastModified="13438132a8f">
       </source>
       <source file="..\..\..\uso\proto.c" lastModified="13e0dc3ffe8">
          <include file="..\..\..\uso\proto.h"/>
          <include file="..\..\..\uso\channels.h"/>
+      </source>
+      <source file="..\..\..\FreeRTOSV7.1.0\Source\include\projdefs.h" lastModified="13438132a8f">
       </source>
       <source file="..\..\..\uso\flash.h" lastModified="136bad33864">
          <include file="..\..\..\stm_lib\inc\stm32f10x_flash.h"/>
@@ -254,10 +258,6 @@
          <include file="..\..\..\FreeRTOSV7.1.0\Source\include\task.h"/>
          <include file="..\..\..\FreeRTOSV7.1.0\Source\include\croutine.h"/>
       </source>
-      <source file="..\..\..\stm_lib\src\stm32f10x_bkp.c" lastModified="13e0dc3bdee">
-         <include file="..\..\..\stm_lib\inc\stm32f10x_bkp.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
       <source file="..\..\..\uso\flash.c" lastModified="136bae15723">
          <include file="..\..\..\uso\flash.h"/>
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
@@ -265,14 +265,18 @@
          <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
       </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_bkp.c" lastModified="13e0dc3bdee">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_bkp.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="13e0dbcbe2e">
          <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
       </source>
-      <source file="..\..\..\stm_lib\inc\stm32f10x_gpio.h" lastModified="13e0dbbc6de">
+      <source file="..\..\..\stm_lib\inc\stm32f10x_tim.h" lastModified="13e0dbc632d">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
-      <source file="..\..\..\stm_lib\inc\stm32f10x_tim.h" lastModified="13e0dbc632d">
+      <source file="..\..\..\stm_lib\inc\stm32f10x_gpio.h" lastModified="13e0dbbc6de">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
       <source file="..\..\..\FreeRTOSV7.1.0\Source\include\FreeRTOS.h" lastModified="13438132e68">
