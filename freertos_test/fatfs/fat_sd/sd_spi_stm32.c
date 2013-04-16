@@ -119,9 +119,9 @@
  #define SOCKET_WP_CONNECTED      0
  #define SOCKET_CP_CONNECTED      0
  #define SPI_SD                   SPI1
- #define GPIO_CS                  GPIOB
- #define RCC_APB2Periph_GPIO_CS   RCC_APB2Periph_GPIOB
- #define GPIO_Pin_CS              GPIO_Pin_6
+ #define GPIO_CS                  GPIOA
+ #define RCC_APB2Periph_GPIO_CS   RCC_APB2Periph_GPIOA
+ #define GPIO_Pin_CS              GPIO_Pin_4
  #define DMA_Channel_SPI_SD_RX    DMA1_Channel2
  #define DMA_Channel_SPI_SD_TX    DMA1_Channel3
  #define DMA_FLAG_SPI_SD_TC_RX    DMA1_FLAG_TC2
@@ -186,7 +186,7 @@ static const DWORD socket_state_mask_wp = (1 << 1);
 static volatile
 DSTATUS Stat = STA_NOINIT;	/* Disk status */
 
-static volatile
+/*static*/ volatile
 DWORD Timer1, Timer2;	/* 100Hz decrement timers */
 
 static
